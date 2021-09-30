@@ -1,0 +1,64 @@
+
+
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+var googleanalytics = (function() {
+
+    ga('create', 'UA-62928432-2', 'auto');
+    ga('set', {userId:'4727552', dimension8:'4727552', dimension12:'Company Administrator', dimension2:'US-0-DEV', dimension3:'Mercury', dimension1:'mdemo4', dimension4:'Client', dimension5:'PR,HR,SCHEDULE,ACCESS,TA', dimension6:'My local copy of mdemo', dimension10:'UKG Ready Direct Company', dimension11:'ASO', });
+
+    return {
+        pageview: function(title, page) {
+          if (typeof ga == 'undefined') {
+            return;
+          }
+
+          if (page === 'blank/loadingPage') {
+            return;
+          }
+
+          if (false) {
+            return;
+          }
+
+          ga('set', 'title', title);
+          ga('set', 'page', page);
+          ga('send', 'pageview');
+        },
+
+        screenview: function(title, page) {
+          if (typeof ga == 'undefined') {
+            return;
+          }
+
+          if (false) {
+            return;
+          }
+
+          ga('set', 'appName', 'MercuryApp');
+          ga('set', 'title', title);
+          ga('set', 'screenName', page);
+          ga('send', 'screenview');
+        },
+
+
+        event: function (category, action, label) {
+          if (typeof ga == 'undefined') {
+            return;
+          }
+
+          if (false) {
+            return;
+          }
+
+          ga('send', 'event', category, action, label);
+        }
+
+        // TODO maybe it makes sense to track job search page (https://wfrsecure.int.kronos.com/ta/mdemo.careers?CareersSearch=1)
+
+    };
+})();
